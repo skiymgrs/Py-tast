@@ -1,25 +1,14 @@
-x = int(input("Enter a 1number: "))
-print(x)
+# py game v0
 
-y = int(input("Enter a 2number: "))
-print(y)
+x = 5
+y = 5
 
-# 1. ใช้ True เพื่อสั่งให้ลูปนี้ทำงานไปเรื่อยๆ ไม่มีวันหยุด จนกว่าเราจะสั่งสั่งหยุดเอง
-while True:
-    z = input("Do you want to add the two numbers? (y/n): ")
-
-    if z == "y":
-        print(x + y)
-        break  # 2. เจอคำว่า break โปรแกรมจะหลุดออกจากลูปทันทีเพราะทำงานสำเร็จแล้ว
-        
-    elif z == "n":
-        print("Okay, not adding the numbers.")
-        print(x, y)
-        print("this is your numbers")
-        print("Goodbye!")
-        break  # 3. หลุดออกจากลูปเช่นกันเมื่อกด n
-        
+try:
+    z = int(input(f"what is {x} + {y} : "))
+except ValueError:
+    print("you have to put a Number")
+else:
+    if z == x + y:
+        print("yey")
     else:
-        # 4. ถ้าพิมพ์อย่างอื่นเข้ามา มันจะไม่เจอ break ลูป while ก็จะวนกลับไปถามคำถามด้านบนใหม่ทันที!
-        print("Invalid input. Please enter 'y' or 'n'. Only!")
-        
+        print("oh no")
